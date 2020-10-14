@@ -196,6 +196,20 @@ h2 {
   color: rgba(0, 0, 0, 0.75);
 }
 
+.content-body p {
+  font-size: 20px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.image-container img {
+  border-radius: 50%;
+  height: 300px;
+  margin-right: 50px;
+}
 /*EDUCATION*/
 .card {
   display: flex;
