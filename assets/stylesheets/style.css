@@ -82,12 +82,12 @@ body {
   margin: 0;
 }
 
-.fa {
+.social .fa {
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
 
-.fa:hover {
+.social .fa:hover {
   color: #0f3057;
   transform: scale(1.3);
 }
@@ -110,6 +110,7 @@ body {
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
+
 .resume-button:hover {
   background-color: #0f3057;
   color: #ecf4f3;
@@ -266,12 +267,50 @@ h4 {
 
 .project-image {
   flex: 1 0 auto;
+  position: relative;
 }
 
 .project-image img {
   display: block;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.project-image:hover img {
+  opacity: 0.3;
+}
+
+.project-image:hover .middle {
+  opacity: 1;
+}
+
+.project-button {
+  padding: 8px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.project-button a {
+  background-color: #ecf4f3;
+  color: #0f3057;
+}
+.project-button:hover {
+  transform: scale(1.1);
 }
 
 .project-content {
@@ -389,4 +428,42 @@ h4 {
 .footer {
   text-align: center;
   padding: 2rem;
+}
+
+/* Back To Top Button */
+
+.back-to-top {
+  display: inline-block;
+  background-color: #03c4a1;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+.back-to-top::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+.back-to-top:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+.back-to-top:active {
+  background-color: #555;
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }
