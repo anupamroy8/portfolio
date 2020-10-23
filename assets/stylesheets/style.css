@@ -27,6 +27,14 @@ body {
 }
 
 /*NAVBAR*/
+.ham {
+  display: none;
+}
+
+#toggle {
+  display: none;
+}
+
 .navbar {
   position: absolute;
   top: 0;
@@ -331,22 +339,6 @@ h4 {
   justify-content: space-between;
 }
 
-.li-skills {
-  display: inline-block;
-  margin: 7px;
-  padding: 5px 10px;
-  color: #ecf4f3;
-  background: #0f3057;
-  list-style: none;
-  cursor: default;
-  font-size: 1.2em;
-  border: 1px solid #0f3057;
-}
-.li-skills:hover {
-  background-color: #ecf4f3;
-  color: #0f3057;
-}
-
 /*CONTACT*/
 .blue {
   text-align: center;
@@ -468,4 +460,34 @@ h4 {
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
+}
+
+/* Skills Responsive */
+
+@media only screen and (max-width: 992px) {
+  .ul-skills {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .project-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+  }
+  .image-container {
+    text-align: center;
+  }
 }
